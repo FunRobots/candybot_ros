@@ -17,28 +17,34 @@ v0.1 - Draft fo Candybot ROS framework
 
 
 ##Files structure
-______________________
 
 ``candybot_ros/`` 
 	
-	``apps/``    (программы-приложения с нужными сценариями и функциональностью)
-		``__init__.py``
-		``encyclopedia.py``
-		...
+	``apps/``    					(программы-приложения с нужными сценариями и функциональностью)
+
+		``launch/``  				(управлением запуском робота и режимом работы dev / prod) 
+			``__init__.py``
+			``settings.py``
+			``base.py``
+			``dev.py``
+			``prod.py``
+			...
+		``nodes``
+			``__init__.py``
+			``encyclopedia.py``
+			...
+		``scripts/`` 				(скрипты для nodes и utils)
+		
+		``tests/`` 					(тесты для apps and launch)
 	
-	``core/``   (центр управления роботом)
+
+	``core/``   					(центр управления роботом)
 		``__init__.py``
-		...
-	
-	``launch/``  (управлением запуском робота и режимом работы dev / prod) 
-		``__init__.py``
-		``settings.py``
-		``base.py``
-		``dev.py``
-		``prod.py``
 		...
 
-	``packages/``    (пакеты с модулями реализующими API и функционал)
+	``msg/``   						(форматы messages)
+
+	``packages/``   				(пакеты с модулями реализующими API и функционал)
 		``audio/``
 			``__init__.py``
 			...
@@ -50,17 +56,17 @@ ______________________
 		``tracker/``
 		...
 	
-	``requirements/``     (зависимости и требования для запуска)
+	``requirements/``     			(зависимости и требования для запуска)
 		``base.txt``
 		``dev.txt``
 		``test.txt``
 		``prod.txt``
 		...
-	``tests/`` (тесты для app and launch)
+
 
 
 ##References 
-_________________________________
+
 
 ### ROS project 
 * Documentation http://wiki.ros.org/ 
