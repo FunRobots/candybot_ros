@@ -1,9 +1,3 @@
-# candybot_video_recognition
-Module for CandyBot to help recognise people and objects via web-cam 
-
-
-
-
 #CandyBot ROS
 ==========
 
@@ -29,7 +23,7 @@ v0.1 - Draft fo Candybot ROS framework
 			``dev.py``
 			``prod.py``
 			...
-		``nodes``
+		``nodes``					(приложения и сценарии для запуска в качестве ROS nodes)
 			``__init__.py``
 			``encyclopedia.py``
 			...
