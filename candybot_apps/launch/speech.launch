@@ -1,0 +1,12 @@
+<launch>
+  <!--
+  	This pushes the local PYTHONPATH into the launch file, so that the Candybot API is found.
+    You need to add the Candybot's API dir to your PYTHONPATH so that the modules are found.
+  -->
+  <env name="PYTHONPATH" value="$(env PYTHONPATH)" />
+  
+  <arg name="candybot_ip" default="$(optenv CANDYBOT_IP 127.0.0.1)" />
+  <arg name="candybot_port" default="$(optenv CANDYBOT_PORT 9559)" />
+
+  <node pkg="nao_apps" type="candybot_speech.py" name="candybot_speech" required="true" args="--pip=$(arg candybot_ip) --pport=$(arg candybot_port)"  />
+</launch>
