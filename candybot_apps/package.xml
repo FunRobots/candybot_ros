@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<python path="${prefix}/src"/>
+
+<package format="2">
+	<name>candybot_apps</name>
+	<version>0.0.1</version>
+
+	<description>Applications for CandyBot using ROS</description>
+
+	<maintainer email="funrobots.ru@gmail.com">Fun Robots</maintainer>
+	
+	<license>BSD</license>
+
+	<depend>roscpp</depend>
+	<depend>std_msgs</depend>
+
+	<buildtool_depend>catkin</buildtool_depend>
+	<build_depend>message_generation</build_depend>
+
+	<exec_depend>rospy</exec_depend>
+
+	<run_depend>message_runtime</run_depend>
+
+</package>

@@ -8,24 +8,17 @@ services:
 
   talker:
     build: .
-    container_name: talker
+    container_name: audio
     environment:
-      - "ROS_HOSTNAME=talker"
+      - "ROS_HOSTNAME=audio"
       - "ROS_MASTER_URI=http://master:11311"
-    command: rosrun roscpp_tutorials talker
+    command: candybot_ros-dev apps nodes candybot_audio
 
   listener:
     build: .
-    container_name: listener
+    container_name: speech
     environment:
-      - "ROS_HOSTNAME=listener"
+      - "ROS_HOSTNAME=speech"
       - "ROS_MASTER_URI=http://master:11311"
-    command: rosrun roscpp_tutorials listener
+    command: candybot_ros-dev apps nodes candybot_speech
 
-  notify_connect:
-    build: .
-    container_name: notify_connect
-    environment:
-      - "ROS_HOSTNAME=listener"
-      - "ROS_MASTER_URI=http://master:11311"
-    command: rosrun roscpp_tutorials notify_connect

@@ -1,12 +1,12 @@
 # This is a Dockerfile for Candybot project
-FROM ros:kinetic
-MAINTAINER Mikhail mnrozhkov@gmail.com
+FROM ros:latest
+#MAINTAINER Mikhail mnrozhkov@gmail.com
 
 
 # install linux packages
-#RUN apt-get update && apt-get install -y \
-#	 some linux packages
-#	&& rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y \
+# 	 #some linux packages
+#    && rm -rf /var/lib/apt/lists/*
 
 
 # install Candybot packages 
